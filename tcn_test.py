@@ -19,7 +19,7 @@ class AudioTCN(nn.Module):
     
 
 # Load model and weights
-tcn_mod = AudioTCN(input_channels=3, num_classes=2, num_channels=[64, 64, 64])
+tcn_mod = AudioTCN(input_channels=3, num_classes=2, num_channels=[128, 128, 128])
 tcn_mod.load_state_dict(torch.load("tcn_model_weights.pth", map_location=device))
 tcn_mod = tcn_mod.to(device)
 tcn_mod.eval()
